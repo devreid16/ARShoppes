@@ -7,10 +7,10 @@ using System.Web;
 namespace ARShoppes.Models
 {
     public class Role
-    {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    {        
         public int RoleID { get; set; }        
         public int DepartmentID { get; set; }
+        public int EmployeeID { get; set; }
         public string Title { get; set; }
 
         public virtual Employee Employee { get; set; }
