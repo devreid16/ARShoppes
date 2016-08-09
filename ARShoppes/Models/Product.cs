@@ -7,10 +7,11 @@ using System.Web;
 namespace ARShoppes.Models
 {
     public class Product
-    {        
+    {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
         public int DepartmentID { get; set; }       
-        public string ProductUpc { get; set; }
+        public int ProductUpc { get; set; }
         public string ProductDesc { get; set; }
         public int ProductQty { get; set; }
         public decimal ProductPrice { get; set; }

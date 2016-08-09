@@ -28,12 +28,12 @@ namespace ARShoppes.DAL
 
             var products = new List<Product>
             {
-            new Product{ProductID=1050,ProductDesc="Coats",ProductQty=30,},
-            new Product{ProductID=4022,ProductDesc="Blouses",ProductQty=23,},
-            new Product{ProductID=4041,ProductDesc="TShirts",ProductQty=43,},
-            new Product{ProductID=1045,ProductDesc="Shoes",ProductQty=45,},
-            new Product{ProductID=3141,ProductDesc="Pants",ProductQty=24,},
-            new Product{ProductID=2021,ProductDesc="Skirts",ProductQty=33,},            
+            new Product{ProductID=1050,ProductUpc=022255588890,ProductDesc="Coats",ProductQty=30,ProductPrice=100.00m},
+            new Product{ProductID=4022,ProductUpc=033366699900,ProductDesc="Blouses",ProductQty=23,ProductPrice=20.00m},
+            new Product{ProductID=4041,ProductUpc=044455566670,ProductDesc="TShirts",ProductQty=43,ProductPrice=10.00m},
+            new Product{ProductID=1045,ProductUpc=055566677780,ProductDesc="Shoes",ProductQty=45,ProductPrice=50.00m},
+            new Product{ProductID=3141,ProductUpc=066677788890,ProductDesc="Pants",ProductQty=24,ProductPrice=30.00m},
+            new Product{ProductID=2021,ProductUpc=077788899000,ProductDesc="Skirts",ProductQty=33,ProductPrice=25.00m},            
             };
 
             products.ForEach(s => context.Products.Add(s));
@@ -60,10 +60,10 @@ namespace ARShoppes.DAL
 
             var departments = new List<Department>
             {
-            new Department {DepartmentID=100,DeptName="Shoes",MgrFName="Steve",MgrLName="Jones",DeptSales=20449.00m},
-            new Department {DepartmentID=200,DeptName="SportsWear",MgrFName="Mark",MgrLName="Staple",DeptSales=20449.00m},
-            new Department {DepartmentID=300,DeptName="Womens",MgrFName="Leslie",MgrLName="Long",DeptSales=20449.00m},
-            new Department {DepartmentID=400,DeptName="Mens",MgrFName="Kim",MgrLName="King",DeptSales=20449.00m},            
+            new Department {DepartmentID=100,DeptName="Shoes",MgrFName="Steve",MgrLName="Jones",DeptSales=20334.00m},
+            new Department {DepartmentID=200,DeptName="SportsWear",MgrFName="Mark",MgrLName="Staple",DeptSales=30150.00m},
+            new Department {DepartmentID=300,DeptName="Womens",MgrFName="Leslie",MgrLName="Long",DeptSales=15049.00m},
+            new Department {DepartmentID=400,DeptName="Mens",MgrFName="Kim",MgrLName="King",DeptSales=10500.00m},            
             };
 
             departments.ForEach(s => context.Departments.Add(s));
@@ -81,8 +81,7 @@ namespace ARShoppes.DAL
             new Employee{DepartmentID=400,EmpTitle="SalesPerson",EmpLName="Olivetto",EmpHireDate=DateTime.Parse("2005-09-01")},
             new Employee{DepartmentID=200,EmpTitle="Manager",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")},
             new Employee{DepartmentID=200,EmpTitle="SalesPerson",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")}
-            };
-
+            };                            
             employees.ForEach(s => context.Employees.Add(s));
             context.SaveChanges();
         }
