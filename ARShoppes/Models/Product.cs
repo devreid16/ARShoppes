@@ -11,7 +11,7 @@ namespace ARShoppes.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
         public int DepartmentID { get; set; }       
-        public int ProductUpc { get; set; }
+        public long ProductUpc { get; set; }
         public string ProductDesc { get; set; }
         public int ProductQty { get; set; }
         public decimal ProductPrice { get; set; }
