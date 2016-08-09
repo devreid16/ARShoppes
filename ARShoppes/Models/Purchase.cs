@@ -12,6 +12,8 @@ namespace ARShoppes.Models
         public int CustomerID { get; set; }
         public int DepartmentID { get; set; }
         public int EmployeeID { get; set; }
+        public decimal SaleTotal { get; set; }
+
 
         //Navigation Properties
         public virtual Product Product { get; set; }
