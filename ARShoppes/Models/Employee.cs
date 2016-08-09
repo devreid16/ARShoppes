@@ -13,8 +13,8 @@ namespace ARShoppes.Models
         public int PurchaseID { get; set; }
         public string EmpLName { get; set; }
         public string EmpFName { get; set; }
-        public string Title { get; set; }
-        public DateTime HireDate { get; set; }
+        public string EmpTitle { get; set; }
+        public DateTime EmpHireDate { get; set; }
 
         //Navigation Properties
         public virtual ICollection<Purchase> Purchases { get; set; }
