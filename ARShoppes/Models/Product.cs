@@ -10,7 +10,7 @@ namespace ARShoppes.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
-        public int DepartmentID { get; set; }       
+        public int DepartmentID { get; set; }
         public long ProductUpc { get; set; }
         public string ProductDesc { get; set; }
         public int ProductQty { get; set; }
@@ -18,6 +18,6 @@ namespace ARShoppes.Models
         public int PurchaseID { get; set; }
         public DateTime PurchaseDate { get; set; }
 
-        public virtual ICollection<Purchase> Purchases { get; set; }
+        public virtual ICollection<Purchase> Purchases { get; set; }       
     }
 }

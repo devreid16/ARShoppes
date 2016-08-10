@@ -9,7 +9,6 @@ namespace ARShoppes.Models
     {
         public int EmployeeID { get; set; }
         public int RoleID { get; set; }
-      //  public int DepartmentID { get; set; }
         public int PurchaseID { get; set; }
         public string EmpLName { get; set; }
         public string EmpFName { get; set; }
@@ -18,5 +17,6 @@ namespace ARShoppes.Models
 
         //Navigation Properties
         public virtual ICollection<Purchase> Purchases { get; set; }
+        
     }
 }
