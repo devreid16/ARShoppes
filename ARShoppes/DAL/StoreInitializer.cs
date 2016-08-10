@@ -28,14 +28,13 @@ namespace ARShoppes.DAL
 
             var products = new List<Product>
             {
-            new Product{ProductID=1050,ProductUpc=022255588890,ProductDesc="Coats",ProductQty=30,ProductPrice=100.00m},
-            new Product{ProductID=4022,ProductUpc=033366699900,ProductDesc="Blouses",ProductQty=23,ProductPrice=20.00m},
-            new Product{ProductID=4041,ProductUpc=044455566670,ProductDesc="TShirts",ProductQty=43,ProductPrice=10.00m},
-            new Product{ProductID=1045,ProductUpc=055566677780,ProductDesc="Shoes",ProductQty=45,ProductPrice=50.00m},
-            new Product{ProductID=3141,ProductUpc=066677788890,ProductDesc="Pants",ProductQty=24,ProductPrice=30.00m},
-            new Product{ProductID=2021,ProductUpc=077788899000,ProductDesc="Skirts",ProductQty=33,ProductPrice=25.00m},            
-            };
-
+            new Product{ProductID=1050,DepartmentID=400,ProductUpc=022255588890,ProductDesc="Coats",ProductQty=30,ProductPrice=100.00m},
+            new Product{ProductID=4022,DepartmentID=200,ProductUpc=033366699900,ProductDesc="Blouses",ProductQty=23,ProductPrice=20.00m},
+            new Product{ProductID=4041,DepartmentID=300,ProductUpc=044455566670,ProductDesc="TShirts",ProductQty=43,ProductPrice=10.00m},
+            new Product{ProductID=1045,DepartmentID=100,ProductUpc=055566677780,ProductDesc="Shoes",ProductQty=45,ProductPrice=50.00m},
+            new Product{ProductID=3141,DepartmentID=400,ProductUpc=066677788890,ProductDesc="Pants",ProductQty=24,ProductPrice=30.00m},
+            new Product{ProductID=2021,DepartmentID=200,ProductUpc=077788899000,ProductDesc="Skirts",ProductQty=33,ProductPrice=25.00m},            
+            };                         
             products.ForEach(s => context.Products.Add(s));
             context.SaveChanges();
 
@@ -71,16 +70,16 @@ namespace ARShoppes.DAL
 
             var employees = new List<Employee>
             {
-            new Employee{DepartmentID=100,EmpTitle="Manager",EmpLName="Alexander",EmpHireDate=DateTime.Parse("2001-09-01")},
-            new Employee{DepartmentID=200,EmpTitle="SalesPerson",EmpLName="Alonso",EmpHireDate=DateTime.Parse("2002-09-01")},
-            new Employee{DepartmentID=300,EmpTitle="StockPerson",EmpLName="Anand",EmpHireDate=DateTime.Parse("2003-09-01")},
-            new Employee{DepartmentID=400,EmpTitle="Manager",EmpLName="Barzdukas",EmpHireDate=DateTime.Parse("2002-09-01")},
-            new Employee{DepartmentID=100,EmpTitle="SalesPerson",EmpLName="Li",EmpHireDate=DateTime.Parse("2012-09-01")},
-            new Employee{DepartmentID=200,EmpTitle="StockPerson",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")},
-            new Employee{DepartmentID=300,EmpTitle="Manager",EmpLName="Norman",EmpHireDate=DateTime.Parse("2003-09-01")},
-            new Employee{DepartmentID=400,EmpTitle="SalesPerson",EmpLName="Olivetto",EmpHireDate=DateTime.Parse("2005-09-01")},
-            new Employee{DepartmentID=200,EmpTitle="Manager",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")},
-            new Employee{DepartmentID=200,EmpTitle="SalesPerson",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")}
+            new Employee{EmpTitle="Manager",EmpLName="Alexander",EmpHireDate=DateTime.Parse("2001-09-01")},
+            new Employee{EmpTitle="SalesPerson",EmpLName="Alonso",EmpHireDate=DateTime.Parse("2002-09-01")},
+            new Employee{EmpTitle="StockPerson",EmpLName="Anand",EmpHireDate=DateTime.Parse("2003-09-01")},
+            new Employee{EmpTitle="Manager",EmpLName="Barzdukas",EmpHireDate=DateTime.Parse("2002-09-01")},
+            new Employee{EmpTitle="SalesPerson",EmpLName="Li",EmpHireDate=DateTime.Parse("2012-09-01")},
+            new Employee{EmpTitle="StockPerson",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")},
+            new Employee{EmpTitle="Manager",EmpLName="Norman",EmpHireDate=DateTime.Parse("2003-09-01")},
+            new Employee{EmpTitle="SalesPerson",EmpLName="Olivetto",EmpHireDate=DateTime.Parse("2005-09-01")},
+            new Employee{EmpTitle="Manager",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")},
+            new Employee{EmpTitle="SalesPerson",EmpLName="Justice",EmpHireDate=DateTime.Parse("2011-09-01")}
             };                            
             employees.ForEach(s => context.Employees.Add(s));
             context.SaveChanges();
