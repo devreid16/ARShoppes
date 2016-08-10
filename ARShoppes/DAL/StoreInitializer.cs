@@ -28,14 +28,13 @@ namespace ARShoppes.DAL
 
             var products = new List<Product>
             {
-            new Product{ProductID=1050,DepartmentID=400,ProductUpc=022255588890,ProductDesc="Coats",ProductQty=30,ProductPrice=100.00m},
-            new Product{ProductID=4022,DepartmentID=200,ProductUpc=033366699900,ProductDesc="Blouses",ProductQty=23,ProductPrice=20.00m},
-            new Product{ProductID=4041,DepartmentID=300,ProductUpc=044455566670,ProductDesc="TShirts",ProductQty=43,ProductPrice=10.00m},
-            new Product{ProductID=1045,DepartmentID=100,ProductUpc=055566677780,ProductDesc="Shoes",ProductQty=45,ProductPrice=50.00m},
-            new Product{ProductID=3141,DepartmentID=400,ProductUpc=066677788890,ProductDesc="Pants",ProductQty=24,ProductPrice=30.00m},
-            new Product{ProductID=2021,DepartmentID=200,ProductUpc=077788899000,ProductDesc="Skirts",ProductQty=33,ProductPrice=25.00m},            
-            };                         
-            products.ForEach(s => context.Products.Add(s));
+            new Product{ProductID=1050,DepartmentID=400,ProductUpc=022255588890,ProductDesc="Coats",ProductQty=30,ProductPrice=100.00m,PurchaseDate=DateTime.Parse("2005-09-01")},
+            new Product{ProductID=4022,DepartmentID=200,ProductUpc=033366699900,ProductDesc="Blouses",ProductQty=23,ProductPrice=20.00m,PurchaseDate=DateTime.Parse("2002-09-01")},
+            new Product{ProductID=4041,DepartmentID=300,ProductUpc=044455566670,ProductDesc="TShirts",ProductQty=43,ProductPrice=10.00m,PurchaseDate=DateTime.Parse("2003-09-01")},
+            new Product{ProductID=1045,DepartmentID=100,ProductUpc=055566677780,ProductDesc="Shoes",ProductQty=45,ProductPrice=50.00m,PurchaseDate=DateTime.Parse("2002-09-01")},
+            new Product{ProductID=3141,DepartmentID=400,ProductUpc=066677788890,ProductDesc="Pants",ProductQty=24,ProductPrice=30.00m,PurchaseDate=DateTime.Parse("2002-09-01")},
+            new Product{ProductID=2021,DepartmentID=200,ProductUpc=077788899000,ProductDesc="Skirts",ProductQty=33,ProductPrice=25.00m,PurchaseDate=DateTime.Parse("2001-09-01")}            
+            };                                                                                                                        
             context.SaveChanges();
 
             var purchases = new List<Purchase>

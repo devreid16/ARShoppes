@@ -8,7 +8,7 @@ namespace ARShoppes.Models
 {
     public class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
         public int DepartmentID { get; set; }
         public long ProductUpc { get; set; }
