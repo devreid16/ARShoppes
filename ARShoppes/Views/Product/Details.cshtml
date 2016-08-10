@@ -1,0 +1,74 @@
+﻿@model ARShoppes.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductUpc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductUpc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model ARShoppes.Models.Purchase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.LName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.LName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DeptName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DeptName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.EmpLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.EmpLName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
